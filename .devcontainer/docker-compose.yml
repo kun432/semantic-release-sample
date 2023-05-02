@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ~/.gitconfig:/home/vscode/.gitconfig
+      - ~/.aws:/home/vscode/.aws
+      - ..:/workspace:cached
+    command: sleep infinity
